@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public InputManager inputManager;
     private Rigidbody2D rb;
     private Collider2D playerCollider;
-    private Vector2 movementVec = Vector2.zero;
+    public Vector2 movementVec = Vector2.zero;
     
     public float movementSpeed;
     public float movementLerpFactor;
