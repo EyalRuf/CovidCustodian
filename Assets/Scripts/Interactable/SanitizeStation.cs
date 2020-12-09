@@ -3,12 +3,14 @@ using System.Collections;
 
 public class SanitizeStation : Interactable
 {
-    public override void Interact()
+    public override IEnumerator Interact()
     {
-        base.Interact();
+        Debug.Log("start ss");
+        yield return base.Interact();
 
-        // Decrease player corona
+        // SS states & animations
 
-        Debug.Log("interacted SanitizeStation");
+        this.Enable();
+        Debug.Log("end ss");
     }
 }

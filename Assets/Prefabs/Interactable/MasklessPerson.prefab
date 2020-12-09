@@ -12,13 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b614cdb3a1df0324dba619d452c5b96b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cm: {fileID: 0}
+  animator: {fileID: 3690734076620738730}
+  coll2d: {fileID: 1897033192584938216}
+  highlight: {fileID: 1002172807489569940}
+  isEnabled: 1
   isHighlighted: 0
   interactionDuration: 0.1
-  isEnabled: 1
-  collider: {fileID: 1897033192584938216}
-  highlight: {fileID: 1002172807489569940}
-  movementSpeed: 1
+  globalCoronaChange: -10
+  selfCoronaChange: 10
+  isWarning: 0
+  warningSR: {fileID: 9021172718041024195}
+  warningDuration: 0.5
+  warningTimer: 0
   movementVec: {x: 1, y: 0}
+  movementSpeed: 1.5
+  moveSpeedPenalty: 0
+  destroySelfX: 10
+  dodging: 0
+  dodgingSpeed: 0.35
+  dodgingCircleRadius: 0.01
+  dodgingDistance: 2
 --- !u!1001 &5218786776255450963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,6 +40,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714763728289984330, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 714763728289984330, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845368359616088464, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5009326837697776577, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Color.r
@@ -81,15 +110,20 @@ PrefabInstance:
       propertyPath: m_Color.b
       value: 0.8998661
       objectReference: {fileID: 0}
+    - target: {fileID: 5926534041251663288, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.94
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
@@ -184,7 +218,7 @@ PrefabInstance:
     - target: {fileID: 5926534041251663292, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Name
-      value: Person
+      value: MasklessPerson
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1483632187561654687, guid: 93276d297bc66d2449cf2a5781e8a825, type: 3}
@@ -201,9 +235,21 @@ CapsuleCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 5218786776255450963}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &3690734076620738730 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8886945645066117113, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 5218786776255450963}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1002172807489569940 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5009326837697776583, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 5218786776255450963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &9021172718041024195 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3845368359616088464, guid: 93276d297bc66d2449cf2a5781e8a825,
     type: 3}
   m_PrefabInstance: {fileID: 5218786776255450963}
   m_PrefabAsset: {fileID: 0}

@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
             if (closestInteractable != null && inputManager.isInteracting)
             {
-                closestInteractable.Interact();
+                StartCoroutine(closestInteractable.Interact());
                 interactionTimer = closestInteractable.interactionDuration;
                 closestInteractable = null;
                 isInteracting = true;
@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move(movementVec);
+        rb.MovePosition(rb.position + (movementVec * movementSpeed * Time.deltaTime));
     }
 
     void calcMovements()
@@ -74,16 +74,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void Move(Vector2 movementVec)
-    {
-        rb.MovePosition(rb.position + (movementVec * movementSpeed * Time.deltaTime)); 
-    }
-
     void FindClosestInteractable()
     {
         if (closestInteractable != null)
         {
-            if (Physics2D.Distance(closestInteractable.collider, playerCollider).distance > interactionRadius)
+            if (Physics2D.Distance(closestInteractable.coll2d, playerCollider).distance > interactionRadius)
             {
                 closestInteractable.Unhighlight();
                 closestInteractable = null;
