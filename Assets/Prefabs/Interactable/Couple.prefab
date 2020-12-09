@@ -12,13 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8585f1f03b924e44a06ce80d6d4655f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cm: {fileID: 0}
+  animator: {fileID: 5129326534942951084}
+  coll2d: {fileID: 7945622957719327982}
+  highlight: {fileID: 8790875306569421458}
+  isEnabled: 1
   isHighlighted: 0
   interactionDuration: 0.1
-  isEnabled: 1
-  collider: {fileID: 7945622957719327982}
-  highlight: {fileID: 8790875306569421458}
-  movementSpeed: 0.5
+  globalCoronaChange: -15
+  selfCoronaChange: 15
+  isWarning: 0
+  warningSR: {fileID: 659421732006645957}
+  warningDuration: 0.5
+  warningTimer: 0
   movementVec: {x: 1, y: 0}
+  movementSpeed: 1
+  moveSpeedPenalty: 0.5
+  destroySelfX: 10
+  dodging: 0
+  dodgingSpeed: 0.35
+  dodgingCircleRadius: 0.25
+  dodgingDistance: 2
 --- !u!1001 &4358291142964173141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26,6 +40,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 714763728289984330, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 714763728289984330, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 5009326837697776577, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Color.r
@@ -86,15 +110,20 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 5926534041251663288, guid: 93276d297bc66d2449cf2a5781e8a825,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.28
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663289, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
@@ -169,22 +198,22 @@ PrefabInstance:
     - target: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Offset.x
-      value: -0.0009905339
+      value: 0.0006243229
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.0004953146
+      value: -0.002419913
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.15807371
+      value: 0.17637546
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
       propertyPath: m_Size.y
-      value: 0.10586043
+      value: 0.09787687
       objectReference: {fileID: 0}
     - target: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
         type: 3}
@@ -211,9 +240,21 @@ CapsuleCollider2D:
     type: 3}
   m_PrefabInstance: {fileID: 4358291142964173141}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &5129326534942951084 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8886945645066117113, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 4358291142964173141}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8790875306569421458 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5009326837697776583, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 4358291142964173141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &659421732006645957 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3845368359616088464, guid: 93276d297bc66d2449cf2a5781e8a825,
     type: 3}
   m_PrefabInstance: {fileID: 4358291142964173141}
   m_PrefabAsset: {fileID: 0}

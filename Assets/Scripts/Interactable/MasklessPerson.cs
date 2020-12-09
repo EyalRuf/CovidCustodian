@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Couple : MovingInteractable
+public class MasklessPerson : MovingInteractable
 {
     public override IEnumerator Interact()
     {
-        Debug.Log("start couple");
+        Debug.Log("start person");
         yield return base.Interact();
 
         // Corona meter updates
 
-        // Couple states & animations
+        // Person states & animations
 
-        Debug.Log("end couple");
+        Debug.Log("end person");
     }
 }
