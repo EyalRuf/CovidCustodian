@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
 
     void Update()
     {
-        if (gm.isMobile())
+        if (gm._isMobile)
         {
             movementInput.x = jm.HorizontalInput();
             movementInput.y = jm.VerticalInput();

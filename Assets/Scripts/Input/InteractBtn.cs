@@ -19,7 +19,7 @@ public class InteractBtn : MonoBehaviour
         }
     }
 
-    public void pressed ()
+    public void BtnClicked ()
     {
         isPressed = true;
         clickTimer = clickDuration;

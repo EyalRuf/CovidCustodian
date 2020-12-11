@@ -3,15 +3,38 @@ using System.Collections;
 
 public class Interactable : MonoBehaviour
 {
-    public bool isHighlighted = false;
-    public float interactionDuration = 1f;
-    public bool isEnabled = true;
-    public Collider2D collider;
+    public CoronaMetersManager cm;
+    public Animator animator;
+    public Collider2D coll2d;
     public GameObject highlight;
 
-    void Awake()
+    public bool isEnabled = true;
+    public bool isHighlighted = false;
+    public float interactionDuration = 1f;
+    
+    public float globalCoronaChange;
+    public float selfCoronaChange;
+
+    public bool isWarning = false;
+    public SpriteRenderer warningSR;
+    public float warningDuration = 0.5f;
+    public float warningTimer = 0;
+
+    protected virtual void Update()
     {
-        collider = GetComponent<Collider2D>();
+        if (isWarning)
+        {
+            warningTimer -= Time.deltaTime;
+            
+            if (warningTimer <= 0)
+            {
+                isWarning = false;
+            } else
+            {
+                var newA = warningSR.color.a - ((1 / warningDuration) * Time.deltaTime);
+                warningSR.color = new Color(warningSR.color.r, warningSR.color.g, warningSR.color.b, newA);
+            }
+        }
     }
 
     public void Highlight()
@@ -26,10 +49,32 @@ public class Interactable : MonoBehaviour
         highlight.SetActive(false);
     }
 
-    public virtual void Interact ()
+    public virtual IEnumerator Interact ()
     {
+        Debug.Log("start interactable");
         Unhighlight();
+        Disable();
+
+        yield return new WaitForSeconds(interactionDuration);
+        cm.updateGlobalMeter(globalCoronaChange);
+        cm.updateSelfMeter(selfCoronaChange);
+        Debug.Log("end interactable");
+    }
+
+    public virtual void Disable ()
+    {
         isEnabled = false;
-        Debug.Log("interacted Interactable");
+    }
+
+    public virtual void Enable()
+    {
+        isEnabled = true;
+    }
+
+    public virtual void Warning ()
+    {
+        isWarning = true;
+        warningTimer = warningDuration;
+        warningSR.color = new Color(warningSR.color.r, warningSR.color.g, warningSR.color.b, 1);
     }
 }
