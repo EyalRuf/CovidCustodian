@@ -25,6 +25,7 @@ MonoBehaviour:
   warningSR: {fileID: 9021172718041024195}
   warningDuration: 0.5
   warningTimer: 0
+  rb: {fileID: 1897033192584938217}
   movementVec: {x: 1, y: 0}
   movementSpeed: 1.5
   moveSpeedPenalty: 0
@@ -33,6 +34,9 @@ MonoBehaviour:
   dodgingSpeed: 0.35
   dodgingCircleRadius: 0.01
   dodgingDistance: 2
+  beingPushed: 0
+  pushDecay: 0.015
+  pushPower: 2
 --- !u!1001 &5218786776255450963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -232,6 +236,12 @@ GameObject:
 --- !u!70 &1897033192584938216 stripped
 CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 5218786776255450963}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1897033192584938217 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5926534041251663290, guid: 93276d297bc66d2449cf2a5781e8a825,
     type: 3}
   m_PrefabInstance: {fileID: 5218786776255450963}
   m_PrefabAsset: {fileID: 0}

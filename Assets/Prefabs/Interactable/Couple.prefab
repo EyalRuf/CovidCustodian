@@ -25,6 +25,7 @@ MonoBehaviour:
   warningSR: {fileID: 659421732006645957}
   warningDuration: 0.5
   warningTimer: 0
+  rb: {fileID: 7945622957719327983}
   movementVec: {x: 1, y: 0}
   movementSpeed: 1
   moveSpeedPenalty: 0.5
@@ -33,6 +34,14 @@ MonoBehaviour:
   dodgingSpeed: 0.35
   dodgingCircleRadius: 0.25
   dodgingDistance: 2
+  beingPushed: 0
+  pushPower: 0
+  pushDecay: 0
+  sm: {fileID: 0}
+  spawnables:
+  - {fileID: 1897033192584938223, guid: 3b26d604d6c29c64b82730d1d58921b1, type: 3}
+  - {fileID: 7199683640813975328, guid: 424fd688003b07d428f403fe801326b5, type: 3}
+  coupleBreakForce: 2.5
 --- !u!1001 &4358291142964173141
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +246,12 @@ GameObject:
 --- !u!70 &7945622957719327982 stripped
 CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 5926534041251663291, guid: 93276d297bc66d2449cf2a5781e8a825,
+    type: 3}
+  m_PrefabInstance: {fileID: 4358291142964173141}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &7945622957719327983 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 5926534041251663290, guid: 93276d297bc66d2449cf2a5781e8a825,
     type: 3}
   m_PrefabInstance: {fileID: 4358291142964173141}
   m_PrefabAsset: {fileID: 0}

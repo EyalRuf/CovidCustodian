@@ -55,7 +55,7 @@ public class SpawnManager : MonoBehaviour
         SpawnMovingInteractable(spawned, movespeed, moveVec, spawnX, spawnY);
     }
 
-    void SpawnMovingInteractable (GameObject prefab, float movespeed, Vector2 moveVec, float spawnX, float spawnY)
+    public MovingInteractable SpawnMovingInteractable (GameObject prefab, float movespeed, Vector2 moveVec, float spawnX, float spawnY)
     {
         GameObject spawned = Instantiate(prefab, spawnParent);
         MovingInteractable spawnedMI = spawned.GetComponent<MovingInteractable>();
@@ -65,7 +65,13 @@ public class SpawnManager : MonoBehaviour
         spawnedMI.dodgingSpeed = spawnedMI.dodgingSpeed * (moveVec.x > 0 ? 1 : -1);
         spawnedMI.cm = cm;
 
-        SortingLayerAdjustor sla = spawned.GetComponent<SortingLayerAdjustor>();
-        sla.objectsToAdjustTo.AddRange(srObjsToAdjustTo);
+        //SortingLayerAdjustor sla = spawned.GetComponent<SortingLayerAdjustor>();
+        //sla.objectsToAdjustTo.AddRange(srObjsToAdjustTo);
+
+        if (spawnedMI.GetType().Equals(typeof(Couple))) {
+            ((Couple) spawnedMI).sm = this;
+        }
+
+        return spawnedMI;
     }
 }

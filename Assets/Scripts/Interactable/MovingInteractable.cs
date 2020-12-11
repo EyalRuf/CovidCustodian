@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovingInteractable : Interactable
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Vector2 movementVec;
     public float movementSpeed;
     public float moveSpeedPenalty;
@@ -15,10 +15,9 @@ public class MovingInteractable : Interactable
     public float dodgingCircleRadius;
     public float dodgingDistance;
 
-    void Awake()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
+    public bool beingPushed;
+    public float pushPower;
+    public float pushDecay;
 
     protected override void Update()
     {
@@ -35,6 +34,7 @@ public class MovingInteractable : Interactable
         }
 
         AvoidCollisions();
+        ApplyPush();
     }
 
     void FixedUpdate()
@@ -44,7 +44,6 @@ public class MovingInteractable : Interactable
 
     void AvoidCollisions ()
     {
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, movementVec, dodgingDistance, LayerMask.GetMask("Interactable"));
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, dodgingCircleRadius, movementVec, dodgingDistance, LayerMask.GetMask("Interactable"));
         foreach (RaycastHit2D hit in hits)
         {
@@ -57,5 +56,24 @@ public class MovingInteractable : Interactable
                 movementVec = new Vector2(movementVec.x, 0);
             }
         }
+    }
+
+    void ApplyPush ()
+    {
+        if (beingPushed)
+        {
+            movementVec = new Vector2(movementVec.x, pushPower);
+            pushPower = Mathf.Lerp(pushPower, 0, pushDecay);
+            if (Mathf.Abs(pushPower) <= pushDecay)
+            {
+                beingPushed = false;
+            }
+        }
+    }
+
+    public void Push(float pushPower)
+    {
+        beingPushed = true;
+        this.pushPower = pushPower;
     }
 }
