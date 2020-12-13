@@ -40,7 +40,7 @@ MonoBehaviour:
   sm: {fileID: 0}
   spawnables:
   - {fileID: 1897033192584938223, guid: 3b26d604d6c29c64b82730d1d58921b1, type: 3}
-  - {fileID: 7199683640813975328, guid: 424fd688003b07d428f403fe801326b5, type: 3}
+  - {fileID: 7393053643045172295, guid: 424fd688003b07d428f403fe801326b5, type: 3}
   coupleBreakForce: 2.5
 --- !u!1001 &4358291142964173141
 PrefabInstance:

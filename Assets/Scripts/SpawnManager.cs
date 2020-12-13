@@ -7,7 +7,6 @@ public class SpawnManager : MonoBehaviour
     public Transform spawnParent;
     public List<GameObject> spawnables;
     public CoronaMetersManager cm;
-    public List<GameObject> srObjsToAdjustTo;
 
     public float spawnTimeMin = 1f;
     public float spawnTimeMax = 4f;
@@ -62,11 +61,8 @@ public class SpawnManager : MonoBehaviour
         spawnedMI.movementSpeed = movespeed;
         spawnedMI.transform.position = new Vector2(spawnX, spawnY);
         spawnedMI.movementVec = moveVec;
-        spawnedMI.dodgingSpeed = spawnedMI.dodgingSpeed * (moveVec.x > 0 ? 1 : -1);
+        //spawnedMI.dodgingSpeed = spawnedMI.dodgingSpeed * (moveVec.x > 0 ? 1 : -1);
         spawnedMI.cm = cm;
-
-        //SortingLayerAdjustor sla = spawned.GetComponent<SortingLayerAdjustor>();
-        //sla.objectsToAdjustTo.AddRange(srObjsToAdjustTo);
 
         if (spawnedMI.GetType().Equals(typeof(Couple))) {
             ((Couple) spawnedMI).sm = this;

@@ -45,16 +45,22 @@ public class MovingInteractable : Interactable
     void AvoidCollisions ()
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, dodgingCircleRadius, movementVec, dodgingDistance, LayerMask.GetMask("Interactable"));
+        Transform hitTransform = null;
         foreach (RaycastHit2D hit in hits)
         {
             if (hit.collider != null && hit.collider.GetInstanceID() != coll2d.GetInstanceID())
             {
-                movementVec = new Vector2(movementVec.x, dodgingSpeed);
+                hitTransform = hit.transform;
                 break;
             } else
             {
                 movementVec = new Vector2(movementVec.x, 0);
             }
+        }
+
+        if (hitTransform != null)
+        {
+            movementVec = new Vector2(movementVec.x, dodgingSpeed * (transform.position.y > hitTransform.position.y ? 1 : -1));
         }
     }
 
