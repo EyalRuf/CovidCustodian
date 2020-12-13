@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MovingInteractable : Interactable
 {
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     public Vector2 movementVec;
     public float movementSpeed;
     public float moveSpeedPenalty;
@@ -15,9 +15,15 @@ public class MovingInteractable : Interactable
     public float dodgingCircleRadius;
     public float dodgingDistance;
 
-    void Awake()
+    public bool beingPushed;
+    public float pushPower;
+    public float pushDecay;
+
+    private string animatorPropNameXMovment = "xMovement";
+
+    protected virtual void Start ()
     {
-        rb = GetComponent<Rigidbody2D>();
+        animator.SetFloat(animatorPropNameXMovment, movementVec.x);
     }
 
     protected override void Update()
@@ -35,6 +41,7 @@ public class MovingInteractable : Interactable
         }
 
         AvoidCollisions();
+        ApplyPush();
     }
 
     void FixedUpdate()
@@ -44,18 +51,42 @@ public class MovingInteractable : Interactable
 
     void AvoidCollisions ()
     {
-        //RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, movementVec, dodgingDistance, LayerMask.GetMask("Interactable"));
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, dodgingCircleRadius, movementVec, dodgingDistance, LayerMask.GetMask("Interactable"));
+        Transform hitTransform = null;
         foreach (RaycastHit2D hit in hits)
         {
             if (hit.collider != null && hit.collider.GetInstanceID() != coll2d.GetInstanceID())
             {
-                movementVec = new Vector2(movementVec.x, dodgingSpeed);
+                hitTransform = hit.transform;
                 break;
             } else
             {
                 movementVec = new Vector2(movementVec.x, 0);
             }
         }
+
+        if (hitTransform != null)
+        {
+            movementVec = new Vector2(movementVec.x, dodgingSpeed * (transform.position.y > hitTransform.position.y ? 1 : -1));
+        }
+    }
+
+    void ApplyPush ()
+    {
+        if (beingPushed)
+        {
+            movementVec = new Vector2(movementVec.x, pushPower);
+            pushPower = Mathf.Lerp(pushPower, 0, pushDecay);
+            if (Mathf.Abs(pushPower) <= pushDecay)
+            {
+                beingPushed = false;
+            }
+        }
+    }
+
+    public void Push(float pushPower)
+    {
+        beingPushed = true;
+        this.pushPower = pushPower;
     }
 }

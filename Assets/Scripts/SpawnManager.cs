@@ -7,7 +7,6 @@ public class SpawnManager : MonoBehaviour
     public Transform spawnParent;
     public List<GameObject> spawnables;
     public CoronaMetersManager cm;
-    public List<GameObject> srObjsToAdjustTo;
 
     public float spawnTimeMin = 1f;
     public float spawnTimeMax = 4f;
@@ -55,17 +54,19 @@ public class SpawnManager : MonoBehaviour
         SpawnMovingInteractable(spawned, movespeed, moveVec, spawnX, spawnY);
     }
 
-    void SpawnMovingInteractable (GameObject prefab, float movespeed, Vector2 moveVec, float spawnX, float spawnY)
+    public MovingInteractable SpawnMovingInteractable (GameObject prefab, float movespeed, Vector2 moveVec, float spawnX, float spawnY)
     {
         GameObject spawned = Instantiate(prefab, spawnParent);
         MovingInteractable spawnedMI = spawned.GetComponent<MovingInteractable>();
         spawnedMI.movementSpeed = movespeed;
         spawnedMI.transform.position = new Vector2(spawnX, spawnY);
         spawnedMI.movementVec = moveVec;
-        spawnedMI.dodgingSpeed = spawnedMI.dodgingSpeed * (moveVec.x > 0 ? 1 : -1);
         spawnedMI.cm = cm;
 
-        SortingLayerAdjustor sla = spawned.GetComponent<SortingLayerAdjustor>();
-        sla.objectsToAdjustTo.AddRange(srObjsToAdjustTo);
+        if (spawnedMI.GetType().Equals(typeof(Couple))) {
+            ((Couple) spawnedMI).sm = this;
+        }
+
+        return spawnedMI;
     }
 }

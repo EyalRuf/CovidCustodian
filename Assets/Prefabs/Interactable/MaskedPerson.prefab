@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8771313893219694031
+--- !u!1001 &8992275295725418152
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -64,19 +64,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1897033192584938219, guid: 3b26d604d6c29c64b82730d1d58921b1,
         type: 3}
-      propertyPath: m_Color.r
-      value: 0.68235296
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897033192584938219, guid: 3b26d604d6c29c64b82730d1d58921b1,
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5714746726288125270, guid: 1a589f642830b314999d173b140d62b6,
         type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897033192584938219, guid: 3b26d604d6c29c64b82730d1d58921b1,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.8207032
-      objectReference: {fileID: 0}
     - target: {fileID: 1897033192584938223, guid: 3b26d604d6c29c64b82730d1d58921b1,
         type: 3}
       propertyPath: m_Name
@@ -86,16 +77,6 @@ PrefabInstance:
         type: 3}
       propertyPath: isEnabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7936577862098540615, guid: 3b26d604d6c29c64b82730d1d58921b1,
-        type: 3}
-      propertyPath: destroySelfX
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7936577862098540615, guid: 3b26d604d6c29c64b82730d1d58921b1,
-        type: 3}
-      propertyPath: dodgingDistance
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b26d604d6c29c64b82730d1d58921b1, type: 3}
