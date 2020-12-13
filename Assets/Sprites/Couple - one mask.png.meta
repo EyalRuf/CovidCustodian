@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: eedc295cb30bab04094dc73c9d36a491
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8993823597448874909
+    second: Couple - one mask_0
+  - first:
+      213: -7621030994678373108
+    second: Couple - one mask_1
+  - first:
+      213: -2439338925694739184
+    second: Couple - one mask_2
+  - first:
+      213: 2586270298377976140
+    second: Couple - one mask_3
+  - first:
+      213: 3796503063539841461
+    second: Couple - one mask_4
+  - first:
+      213: 274396850533112851
+    second: Couple - one mask_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,7 +127,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Couple - one mask_0
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 39
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b477a19ea70dc70800000000000000
+      internalID: 8993823597448874909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - one mask_1
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 40
+        width: 56
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0524f330b8ac3690800000000000000
+      internalID: -7621030994678373108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - one mask_2
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 40
+        width: 56
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01d9e27db2ab52ed0800000000000000
+      internalID: -2439338925694739184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - one mask_3
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 39
+        width: 54
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4976fb322744e320800000000000000
+      internalID: 2586270298377976140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - one mask_4
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 41
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b979faeb63efa430800000000000000
+      internalID: 3796503063539841461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - one mask_5
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 41
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31c13835b7adec300800000000000000
+      internalID: 274396850533112851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

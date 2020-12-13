@@ -4,12 +4,11 @@ using System.Collections;
 public class Person : MovingInteractable
 {
     private string animatorPropNameMasked = "masked";
-    private string animatorPropNameXMovment = "xMovement";
 
-    void Start()
+    protected override void Start()
     {
-        // Setting masked/unmasked + direction of animations 
-        animator.SetFloat(animatorPropNameXMovment, movementVec.x);
+        base.Start();
+
         animator.SetBool(animatorPropNameMasked, !this.isEnabled);
     }
 

@@ -61,7 +61,6 @@ public class SpawnManager : MonoBehaviour
         spawnedMI.movementSpeed = movespeed;
         spawnedMI.transform.position = new Vector2(spawnX, spawnY);
         spawnedMI.movementVec = moveVec;
-        //spawnedMI.dodgingSpeed = spawnedMI.dodgingSpeed * (moveVec.x > 0 ? 1 : -1);
         spawnedMI.cm = cm;
 
         if (spawnedMI.GetType().Equals(typeof(Couple))) {

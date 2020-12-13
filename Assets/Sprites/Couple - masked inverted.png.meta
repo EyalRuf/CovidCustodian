@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 2e5b0d42df2362a40b4c1ab673d23137
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -9117807488248765064
+    second: Couple - masked inverted_0
+  - first:
+      213: -5723011034121943386
+    second: Couple - masked inverted_1
+  - first:
+      213: -8114523255824530189
+    second: Couple - masked inverted_2
+  - first:
+      213: -5970423515127785503
+    second: Couple - masked inverted_3
+  - first:
+      213: -3247023473736704135
+    second: Couple - masked inverted_4
+  - first:
+      213: 8970844107629139360
+    second: Couple - masked inverted_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,7 +127,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Couple - masked inverted_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 39
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875298cc56a077180800000000000000
+      internalID: -9117807488248765064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - masked inverted_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 40
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6458949c7c390b0800000000000000
+      internalID: -5723011034121943386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - masked inverted_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 40
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4cee6671c636f80800000000000000
+      internalID: -8114523255824530189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - masked inverted_3
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 39
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e75b26127bc42da0800000000000000
+      internalID: -5970423515127785503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - masked inverted_4
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 41
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97f9196aa5140f2d0800000000000000
+      internalID: -3247023473736704135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - masked inverted_5
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 41
+        width: 52
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a514a2bf27de7c70800000000000000
+      internalID: 8970844107629139360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

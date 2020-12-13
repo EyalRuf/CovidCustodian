@@ -19,6 +19,13 @@ public class MovingInteractable : Interactable
     public float pushPower;
     public float pushDecay;
 
+    private string animatorPropNameXMovment = "xMovement";
+
+    protected virtual void Start ()
+    {
+        animator.SetFloat(animatorPropNameXMovment, movementVec.x);
+    }
+
     protected override void Update()
     {
         base.Update();

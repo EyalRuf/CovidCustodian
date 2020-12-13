@@ -1,7 +1,25 @@
 fileFormatVersion: 2
 guid: 8d84c3d66e86b8c47ae80c6da9c7996b
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3706767732010688862
+    second: Couple - Masked_0
+  - first:
+      213: -7268070834591681413
+    second: Couple - Masked_1
+  - first:
+      213: -2857620212434466025
+    second: Couple - Masked_2
+  - first:
+      213: 5524975746835644252
+    second: Couple - Masked_3
+  - first:
+      213: -5577777421512400068
+    second: Couple - Masked_4
+  - first:
+      213: -8494530020894232344
+    second: Couple - Masked_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +58,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -109,7 +127,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Couple - Masked_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 39
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51a06bec95117330800000000000000
+      internalID: 3706767732010688862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - Masked_1
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 40
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7439c57510a22b90800000000000000
+      internalID: -7268070834591681413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - Masked_2
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 40
+        width: 57
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71b0ede9e81b758d0800000000000000
+      internalID: -2857620212434466025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - Masked_3
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 39
+        width: 55
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f79ce4b28acac40800000000000000
+      internalID: 5524975746835644252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - Masked_4
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 41
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c332f8accf0c792b0800000000000000
+      internalID: -5577777421512400068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Couple - Masked_5
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 41
+        width: 53
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e035b2b3fd5d1a80800000000000000
+      internalID: -8494530020894232344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

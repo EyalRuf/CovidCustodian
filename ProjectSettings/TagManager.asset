@@ -8,6 +8,7 @@ TagManager:
   - GroupingObj
   - Env
   - GameManagers
+  - UI
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - 
   - Interactable
   - Player
-  - BordersX
-  - BordersY
-  - 
+  - BordersXOnlyPlayer
+  - BordersYNonPlayer
+  - BorderYOnlyPlayer
   - 
   - 
   - 

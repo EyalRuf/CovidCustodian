@@ -5,7 +5,8 @@ using System.Collections.Generic;
 public class Couple : MovingInteractable
 {
     public SpawnManager sm;
-    public List<GameObject> spawnables;
+    public GameObject spawnedTop;
+    public GameObject spawnedBottom;
     public float coupleBreakForce;
 
     public override IEnumerator Interact()
@@ -14,13 +15,13 @@ public class Couple : MovingInteractable
         yield return base.Interact();
 
         // Couple action & animations
-        MovingInteractable first =
-            sm.SpawnMovingInteractable(spawnables[Random.Range(0, spawnables.Count)], this.movementSpeed, this.movementVec, transform.position.x, transform.position.y + 0.1f);
-        MovingInteractable second = 
-            sm.SpawnMovingInteractable(spawnables[Random.Range(0, spawnables.Count)], this.movementSpeed, this.movementVec, transform.position.x, transform.position.y - 0.1f);
+        MovingInteractable top =
+            sm.SpawnMovingInteractable(spawnedTop, this.movementSpeed, this.movementVec, transform.position.x, transform.position.y + 0.1f);
+        MovingInteractable bottom = 
+            sm.SpawnMovingInteractable(spawnedBottom, this.movementSpeed, this.movementVec, transform.position.x, transform.position.y - 0.1f);
 
-        first.Push(coupleBreakForce);
-        second.Push(-coupleBreakForce);
+        top.Push(coupleBreakForce);
+        bottom.Push(-coupleBreakForce);
         
         Debug.Log("end couple");
         Destroy(gameObject);
