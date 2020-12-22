@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,12 +12,17 @@ public class GameManager : MonoBehaviour
     public bool _isMobile = false;
 
     public CoronaMetersManager cm;
+    public AudioSource bgMusic;
+    public GameObject audioOnBtn;
+    public GameObject audioOffBtn;
+    //public GameObject fullscreenBtn;
+    //public GameObject fullscreenOffBtn;
 
-    // Start is called before the first frame update
     void Start()
     {
         _isMobile = CheckIfMobile();
         mobileControls.SetActive(_isMobile);
+
     }
 
     void Update()
@@ -25,6 +31,9 @@ public class GameManager : MonoBehaviour
         {
             GameOver();
         }
+
+        //fullscreenBtn.SetActive(!Screen.fullScreen);
+        //fullscreenOffBtn.SetActive(Screen.fullScreen);
     }
 
     public bool CheckIfMobile()
@@ -43,4 +52,16 @@ public class GameManager : MonoBehaviour
 
         // transition to game over scene
     }
+
+    public void toggleMute ()
+    {
+        bgMusic.mute = !bgMusic.mute;
+        audioOnBtn.SetActive(!audioOnBtn.activeSelf);
+        audioOffBtn.SetActive(!audioOffBtn.activeSelf);
+    }
+
+    //public void toggleFullscreen()
+    //{
+    //    Screen.fullScreen = !Screen.fullScreen;
+    //}
 }

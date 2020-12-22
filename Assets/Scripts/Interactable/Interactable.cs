@@ -51,14 +51,12 @@ public class Interactable : MonoBehaviour
 
     public virtual IEnumerator Interact ()
     {
-        Debug.Log("start interactable");
         Unhighlight();
         Disable();
 
         yield return new WaitForSeconds(interactionDuration);
         cm.updateGlobalMeter(globalCoronaChange);
         cm.updateSelfMeter(selfCoronaChange);
-        Debug.Log("end interactable");
     }
 
     public virtual void Disable ()

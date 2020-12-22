@@ -11,7 +11,6 @@ public class Couple : MovingInteractable
 
     public override IEnumerator Interact()
     {
-        Debug.Log("start couple");
         yield return base.Interact();
 
         // Couple action & animations
@@ -23,7 +22,6 @@ public class Couple : MovingInteractable
         top.Push(coupleBreakForce);
         bottom.Push(-coupleBreakForce);
         
-        Debug.Log("end couple");
         Destroy(gameObject);
     }
 }

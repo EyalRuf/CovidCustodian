@@ -185,8 +185,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
+  pa: {fileID: 9192879239434225338}
   movementVec: {x: 0, y: 0}
-  movementSpeed: 4
+  movementSpeed: 3
   movementLerpFactor: 0.05
   isInteracting: 0
   interactionTimer: 0

@@ -13,4 +13,9 @@ public class PlayerAnimation : MonoBehaviour
         anim.SetFloat("hm", pc.movementVec.x);
         anim.SetFloat("vm", pc.movementVec.y);
     }
+
+    public void InteractionAnimation (bool flag)
+    {
+        anim.SetTrigger(flag ? "interacting" : "stopInteracting");
+    }
 }
