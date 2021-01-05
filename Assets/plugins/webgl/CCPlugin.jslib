@@ -13,7 +13,7 @@ var CCPlugin = {
     Tweet: function(score)
     {
         console.log(score);
-        window.open(""https://twitter.com/intent/tweet?text=My Covid Custodian score is "+ 
+        window.open("https://twitter.com/intent/tweet?text=My Covid Custodian score is "+ 
                 score + "! Think you can beat me? Try here: https://eyalruf.itch.io/covid-custodian", 
             "_blank");
     }
