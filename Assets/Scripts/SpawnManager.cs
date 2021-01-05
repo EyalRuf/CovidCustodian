@@ -19,7 +19,6 @@ public class SpawnManager : MonoBehaviour
     public float spawnYMin = 0;
     public float spawnYMax = 0;
 
-    // Use this for initialization
     void Start()
     {
         StartCoroutine(SpawnCycle());

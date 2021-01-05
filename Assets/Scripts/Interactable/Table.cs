@@ -61,15 +61,10 @@ public class Table : Interactable
 
     public override IEnumerator Interact()
     {
-        Debug.Log("start table");
         yield return base.Interact();
-
-        // Corona meter updates
 
         // Table states and animations
         StartCoroutine(Clean());
-
-        Debug.Log("end table");
     }
 
     public void Dirty()

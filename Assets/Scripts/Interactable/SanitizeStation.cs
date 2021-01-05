@@ -5,12 +5,10 @@ public class SanitizeStation : Interactable
 {
     public override IEnumerator Interact()
     {
-        Debug.Log("start ss");
         yield return base.Interact();
 
-        // SS states & animations
-
+        // Re-enable ss to be reused again
         this.Enable();
-        Debug.Log("end ss");
+        this.skull.SetActive(false);
     }
 }

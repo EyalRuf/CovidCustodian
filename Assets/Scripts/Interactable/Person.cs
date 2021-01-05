@@ -14,10 +14,7 @@ public class Person : MovingInteractable
 
     public override IEnumerator Interact()
     {
-        Debug.Log("start person");
         yield return base.Interact();
-
-        Debug.Log("end person");
     }
 
     public override void Enable()

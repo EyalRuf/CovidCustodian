@@ -100,8 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c5c00d8ead2da3428d2e22112c37aa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sr: {fileID: 7769402260235261663}
   isStationary: 0
+  srsToBeAdjusted:
+  - {fileID: 7769402260235261663}
 --- !u!50 &7769402260235261648
 Rigidbody2D:
   serializedVersion: 4
@@ -185,9 +186,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 0}
+  pa: {fileID: 9192879239434225338}
   movementVec: {x: 0, y: 0}
-  movementSpeed: 4
-  movementLerpFactor: 0.05
+  movementSpeed: 3
+  movementLerpFactor: 0.85
   isInteracting: 0
   interactionTimer: 0
   interactionRadius: 0.3
