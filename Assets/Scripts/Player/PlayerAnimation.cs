@@ -16,6 +16,10 @@ public class PlayerAnimation : MonoBehaviour
 
     public void InteractionAnimation (bool flag)
     {
-        anim.SetTrigger(flag ? "interacting" : "stopInteracting");
+        anim.SetBool("isInteracting", flag);
+        if (anim)
+        {
+            anim.SetTrigger("interactingTrigger");
+        }
     }
 }

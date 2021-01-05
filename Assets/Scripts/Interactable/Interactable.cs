@@ -20,6 +20,8 @@ public class Interactable : MonoBehaviour
     public float warningDuration = 0.5f;
     public float warningTimer = 0;
 
+    public GameObject skull;
+
     protected virtual void Update()
     {
         if (isWarning)
@@ -31,7 +33,7 @@ public class Interactable : MonoBehaviour
                 isWarning = false;
             } else
             {
-                var newA = warningSR.color.a - ((1 / warningDuration) * Time.deltaTime);
+                float newA = warningSR.color.a - ((1 / warningDuration) * Time.deltaTime);
                 warningSR.color = new Color(warningSR.color.r, warningSR.color.g, warningSR.color.b, newA);
             }
         }
@@ -62,11 +64,13 @@ public class Interactable : MonoBehaviour
     public virtual void Disable ()
     {
         isEnabled = false;
+        skull.SetActive(false);
     }
 
     public virtual void Enable()
     {
         isEnabled = true;
+        skull.SetActive(true);
     }
 
     public virtual void Warning ()

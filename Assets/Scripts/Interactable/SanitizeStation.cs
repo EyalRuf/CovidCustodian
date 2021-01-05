@@ -9,5 +9,6 @@ public class SanitizeStation : Interactable
 
         // Re-enable ss to be reused again
         this.Enable();
+        this.skull.SetActive(false);
     }
 }

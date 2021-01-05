@@ -3,14 +3,14 @@
 [RequireComponent(typeof(SpriteRenderer))]
 public class SortingLayerAdjustor : MonoBehaviour
 {
-    public SpriteRenderer sr;
     public bool isStationary;
+    public SpriteRenderer[] srsToBeAdjusted;
 
     void Start ()
     {
         if (isStationary)
         {
-            sr.sortingOrder = (int)(transform.position.y * 100) * -1;
+            this.Adjust();
             Destroy(this);
         }
     }
@@ -18,6 +18,15 @@ public class SortingLayerAdjustor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        sr.sortingOrder = (int)(transform.position.y * 100) * -1;
+        this.Adjust();
+    }
+
+    void Adjust()
+    {
+        int so = (int)(transform.position.y * 100) * -1;
+        foreach (SpriteRenderer sr in srsToBeAdjusted)
+        {
+            sr.sortingOrder = so;
+        }
     }
 }

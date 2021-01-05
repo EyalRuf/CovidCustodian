@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public InputManager inputManager;
-    public PlayerAnimation pa;
+    public PlayerAnimation pAnimation;
     private Rigidbody2D rb;
     private Collider2D playerCollider;
     public Vector2 movementVec = Vector2.zero;
@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
             if (closestInteractable != null && inputManager.isInteracting)
             {
                 interactionTimer = closestInteractable.interactionDuration;
-                pa.InteractionAnimation(true);
+                pAnimation.InteractionAnimation(true);
                 isInteracting = true;
                 StartCoroutine(closestInteractable.Interact());
             }
@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
             if (interactionTimer <= 0)
             {
                 isInteracting = false;
-                pa.InteractionAnimation(false);
+                pAnimation.InteractionAnimation(false);
             }
         }
     }

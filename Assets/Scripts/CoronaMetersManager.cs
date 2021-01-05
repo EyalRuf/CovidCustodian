@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 public class CoronaMetersManager : MonoBehaviour
 {
+    public GameManager gm;
     public float globalCoronaMeter = 0;
     public float globalCoronaMeterMax = 100;
     public float selfCoronaMeter = 0;
@@ -35,6 +36,9 @@ public class CoronaMetersManager : MonoBehaviour
     public void updateGlobalMeter (float value)
     {
         globalCoronaMeter += value;
+
+        if (value < 0)
+            gm.UpdateScore(-1 * value);
     }
 
     public void updateSelfMeter(float value)
